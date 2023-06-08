@@ -1,0 +1,187 @@
+/* Start Variables */
+:root {
+    --main-color: #19C8FA;
+}
+
+/* End Variables */
+
+/* Start Global Rules */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/* small screens */
+
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+
+}
+
+/* medium screens */
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+
+}
+
+/* large screens */
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+
+}
+
+
+
+/* End Global Rules */
+
+/* Start Header */
+.landing {
+    background-image: url(../media/parallel-world_landing.jpg);
+    background-size: cover;
+    height: 100vh;
+    padding-top: 30px;
+}
+
+.container .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 90px;
+}
+
+.container .header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #FFF;
+}
+
+.container .header .list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.container .header ul {
+    list-style-type: none;
+    display: flex;
+    margin-right: 30px;
+}
+
+.container .header ul li {
+    text-decoration: none;
+    color: #FFF;
+    position: relative;
+    padding: 36px 10px;
+}
+
+li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0px;
+    left: -50%;
+    background-color: var(--main-color);
+    opacity: 0;
+    transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+    z-index: 10;
+
+}
+
+.container .header ul li:hover a {
+    color: var(--main-color);
+}
+
+.container .header ul li:hover a::after {
+    opacity: 1;
+}
+
+.container .header ul li a {
+    text-decoration: none;
+    color: #FFF;
+
+}
+
+.container .header .list i {
+    color: #FFF;
+
+
+}
+
+i.fa-magnifying-glass {
+    border-left: 2px solid #FFF;
+    padding: 10px 0 10px 10px;
+
+}
+
+i.fa-bars {
+    display: none;
+    padding-right: 20px;
+}
+
+
+@media (max-width:768px) {
+    .container .header ul {
+        display: none;
+    }
+
+    i.fa-bars {
+        display: block;
+    }
+
+    i.fa-bars:hover+ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0px;
+        width: 100%;
+        background-color: #00000070;
+        padding: 0px;
+        transform: translateY(-10px);
+        -webkit-transform: translateY(-10px);
+        -moz-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+        -o-transform: translateY(-10px);
+    }
+
+    i.fa-bars:hover+ul li {
+        padding: 10px;
+    }
+
+
+}
+
+
+
+
+
+
+/* End Header */
