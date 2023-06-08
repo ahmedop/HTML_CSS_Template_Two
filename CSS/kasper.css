@@ -58,17 +58,24 @@ ul {
 /* Start Special Compnants */
 .special-title {
     text-align: center;
-    font: 30px;
-    font-weight: 800;
-    position: relative;
-    padding: 40px 0px;
+    padding-top: 100px;
+    padding-bottom: 10px;
+
 }
 
-.special-title::after {
+.special-title h2 {
+    font-size: 40px;
+    margin: 0px;
+    padding-bottom: 30px;
+    font-weight: 300;
+    position: relative;
+}
+
+.special-title h2::after {
     content: "";
     position: absolute;
-    height: 1px;
-    width: 100px;
+    height: 2px;
+    width: 150px;
     background-color: #000;
     left: 50%;
     bottom: 0px;
@@ -80,12 +87,12 @@ ul {
     z-index: 1;
 }
 
-.special-title::before {
+.special-title h2::before {
     content: "";
     position: absolute;
-    width: 20px;
-    height: 20px;
-    border: 1px solid #000;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #000;
     background-color: #FFF;
     border-radius: 50%;
     -webkit-border-radius: 50%;
