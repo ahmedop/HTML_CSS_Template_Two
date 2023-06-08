@@ -175,6 +175,7 @@ i.fa-bars {
         -moz-transform: translateY(-10px);
         -ms-transform: translateY(-10px);
         -o-transform: translateY(-10px);
+        z-index: 100;
     }
 
     i.fa-bars:hover+ul li {
@@ -221,7 +222,7 @@ i.right-dir {
 }
 
 i.right-dir:hover,
-i.left-dir:hover{
+i.left-dir:hover {
     color: var(--main-color);
     transform: scale(1.5);
     -webkit-transform: scale(1.5);
@@ -229,6 +230,7 @@ i.left-dir:hover{
     -ms-transform: scale(1.5);
     -o-transform: scale(1.5);
 }
+
 @media (max-width:768px) {
     .landing .landing-content {
         width: 100%;
