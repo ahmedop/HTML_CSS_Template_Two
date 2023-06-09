@@ -420,7 +420,7 @@ i.left-dir:hover {
     position: relative;
     overflow: hidden;
     color: #FFF;
-    padding: 30px;
+    padding: 0 30px ;
 
 }
 
@@ -432,11 +432,13 @@ i.left-dir:hover {
     height: 100%;
     width: 100%;
     background-color: #00000078;
+    z-index: 3;
 }
 
 .services .services-landing img {
     position: absolute;
     bottom: -150px;
+    z-index: 4;
 }
 
 .services .services-landing .text {
@@ -451,6 +453,7 @@ i.left-dir:hover {
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
+    z-index: 10;
 }
 
 .services .services-landing .text h2 {
@@ -473,15 +476,25 @@ i.left-dir:hover {
     margin-right: 20px;
     position: relative;
     top: 1px;
+
 }
 
 @media (max-width:768px) {
     .services .services-landing .text {
         width: 100%;
+
     }
 
+
     .services .services-landing img {
-        display: none;
+        z-index: 2;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
     }
 }
+
 /* End Services Section */
