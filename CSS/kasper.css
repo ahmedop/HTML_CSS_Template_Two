@@ -112,12 +112,14 @@ ul {
 }
 
 .special-title p {
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    color: var(--secondry-color);
-    line-height: 25px;
+    width: 550px;
+    max-width: 100%;
+    margin: 40px auto 0px auto;
+    color: #797979;
+    line-height: 2;
 }
+
+
 
 /* End Special Compnants */
 
@@ -375,17 +377,7 @@ i.left-dir:hover {
 
 }
 
-@media (max-width:768px) {
-    .services .container .services-content {
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    }
 
-    .services .container .services-content .col .serv {
-        flex-direction: column;
-        text-align: center;
-    }
-
-}
 
 .services .container .services-content .col .serv i {
     margin-right: 30px;
@@ -401,6 +393,22 @@ i.left-dir:hover {
 .services .container .services-content .col .serv p {
     color: var(--secondry-color);
     line-height: 30px;
+}
+
+@media (max-width:768px) {
+    .services .container .services-content {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+
+    .services .container .services-content .col .serv {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .services .container .services-content .col .serv i {
+        margin-right: 0px;
+    }
+
 }
 
 /* End Services Section */
