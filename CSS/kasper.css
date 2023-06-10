@@ -740,8 +740,113 @@ i.left-dir:hover {
 }
 
 .about .reviews .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    display: flex;
+    justify-content: space-between;
+}
+
+.about .reviews .container .col .head {
+    text-align: center;
+}
+
+.about .reviews .container .col .head h3 {
+    font-weight: normal;
+}
+
+.about .reviews .container .col .head p {
+    color: var(--secondry-color);
+    line-height: 2;
+    padding-top: 20px;
+}
+
+.about .reviews .container .col .testimonials {
+    padding-top: 30px;
+    max-width: 100%;
+    position: relative;
+}
+
+.about .reviews .container .col .one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+
+}
+
+.about .reviews .container .col .one img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.about .reviews .container .col .one p:first-of-type {
+    padding: 50px;
+    align-self: flex-end;
+}
+
+.about .reviews .container .col .one p:nth-of-type(2) {
+    text-align: end;
+    margin-bottom: 10px;
+    color: var(--secondry-color);
+}
+
+.about .reviews .container .first {
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.first .bullits {
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    display: flex;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.first .bullits li {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    background-color: transparent;
+    border: 1px solid var(--secondry-color);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.first .bullits li:hover {
+    background-color: var(--main-color);
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+}
+
+@media (max-width:768px) {
+    .about .reviews .container .col .one {
+        flex-direction: column;
+
+    } 
+
+    .about .reviews .container {
+        flex-direction: column;
+    }
+
+    .about .reviews .container .col .one p:first-of-type {
+        text-align: center;
+        padding: 30px;
+    }
 }
 
 /* End Reviews */
