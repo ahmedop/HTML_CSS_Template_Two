@@ -744,6 +744,11 @@ i.left-dir:hover {
     justify-content: space-between;
 }
 
+.about .reviews .container .col {
+    padding-bottom: 30px;
+    width: calc((100% - 20px)/2);
+}
+
 .about .reviews .container .col .head {
     text-align: center;
 }
@@ -795,7 +800,7 @@ i.left-dir:hover {
 
 .about .reviews .container .first {
     position: relative;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .first .bullits {
@@ -834,10 +839,14 @@ i.left-dir:hover {
 }
 
 @media (max-width:768px) {
+    .about .reviews .container .col {
+        width: 100%;
+    }
+
     .about .reviews .container .col .one {
         flex-direction: column;
 
-    } 
+    }
 
     .about .reviews .container {
         flex-direction: column;
@@ -849,6 +858,91 @@ i.left-dir:hover {
     }
 }
 
+.about .reviews .container .skills {
+    padding-top: 30px;
+}
+
+.about .reviews .container .skills .skill {
+    padding: 25px;
+}
+
+.about .reviews .container .skills .skill p {
+    margin-bottom: 20px;
+}
+
+.about .reviews .container .skills .skill div {
+    width: 100%;
+    background-color: #dedadc;
+    height: 30px;
+}
+
+.about .reviews .container .skills .skill span {
+    display: block;
+    height: 100%;
+    background-color: var(--main-color);
+    position: relative;
+}
+
+.about .reviews .container .skills .skill span::after {
+    content: attr(data-progres);
+    position: absolute;
+    background-color: #000;
+    color: #FFF;
+    padding: 5px;
+    right: -20px;
+    top: -40px;
+    border-radius: 10px;
+}
+
+.about .reviews .container .skills .skill span::before {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 10px;
+    border-color: #000 transparent transparent transparent;
+    right: -10px;
+    top: -15px;
+}
+
+
 /* End Reviews */
+.about-landing {
+    background-image: url(../media/quote.jpg);
+    background-size: cover;
+    position: relative;
+    padding: 100px 0;
+}
+
+.about-landing::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0 0 0 / 70%);
+    z-index: 1;
+}
+
+.about-landing .container {
+    text-align: center;
+    color: #FFF;
+    position: relative;
+    z-index: 2;
+}
+
+.about-landing .container q {
+    font-size: 30px;
+    margin: 30px 0;
+    display: block;
+}
 
 /* End About Section */
+
+/* Start Pricing Section */
+.pricing {
+    padding-top: 100px;
+}
+
+/* End Pricing Section */
