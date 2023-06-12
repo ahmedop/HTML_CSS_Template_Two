@@ -754,7 +754,7 @@ i.left-dir:hover {
 }
 
 .about .reviews .container .col .head h3 {
-    font-weight: normal;
+    margin-bottom: 10px;
 }
 
 .about .reviews .container .col .head p {
@@ -945,4 +945,288 @@ i.left-dir:hover {
     padding-top: 100px;
 }
 
+
+.pricing-content .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.pricing-content .container .box {
+    width: calc((100% - 60px)/4);
+    text-align: center;
+    min-width: 200px;
+    background-color: #FCFCFC;
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+
+@media (max-width:768px) {
+    .pricing-content .container .box {
+        width: 100%;
+    }
+}
+
+.pricing-content .container .box .head {
+    padding: 40px 20px;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+
+.pricing-content .container .box .head p {
+    padding: 15px 0;
+    font-size: 59px;
+}
+
+.pricing-content .container .box .head sup {
+    top: -1.5em;
+    font-size: 20px;
+}
+
+.pricing-content .container .box .head sub {
+    font-size: 20px;
+}
+
+.pricing-content .container .box ul {
+    border-bottom: 1px solid var(--main-color);
+    padding-left: 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pricing-content .container .box li {
+    padding: 10px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.pricing-content .container .box li:not(:last-of-type) {
+    border-bottom: 1px solid var(--main-color);
+}
+
+.pricing-content .container .box a {
+    padding: 10px;
+    width: fit-content;
+    margin: 10px auto;
+    border: 1px solid var(--main-color);
+}
+
+.pricing-content .special-req {
+    padding: 60px 15px;
+    text-align: center;
+}
+
+.pricing-content .special-req p {
+    padding-bottom: 30px;
+}
+
+.pricing-content .special-req a {
+    background-color: var(--main-color);
+    color: #FFF;
+    padding: 10px;
+}
+
 /* End Pricing Section */
+
+/* Start Subscribe Section */
+.subscribe {
+    margin-top: 60px;
+    background-image: url(../media/subscribe.jpg);
+    background-size: cover;
+    padding: 100px 0;
+}
+
+.subscribe .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subscribe .container .mail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subscribe .container i {
+    color: #FFF;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.subscribe .container .mail {
+    border: 1px solid #FFF;
+}
+
+
+
+.subscribe .container input:first-of-type {
+    background-color: transparent;
+    border: none;
+    color: #FFF;
+    margin-left: 10px;
+}
+
+.subscribe .container input:first-of-type:focus {
+    outline: none;
+}
+
+.subscribe .container input:last-of-type {
+    background-color: var(--main-color);
+    color: #FFF;
+    padding: 20px 20px;
+    border: none;
+
+}
+
+.subscribe .container .text {
+    width: calc((100% - 30px)/2);
+    color: #FFF;
+    line-height: 2;
+}
+
+@media (max-width:768px) {
+    .subscribe .container {
+        flex-direction: column;
+    }
+
+    .subscribe .container .text {
+        width: 100%;
+        padding-top: 30px;
+
+    }
+
+    .subscribe .container .mail {
+        width: 100%;
+    }
+
+    .subscribe .container .mail form {
+        display: flex;
+    }
+}
+
+/* End Subscribe Section */
+
+/* Start Contact Section */
+.contact {
+    padding-top: 100px;
+}
+
+.contact .content {
+    padding-top: 60px;
+    display: flex;
+    gap: 40px;
+
+}
+
+.contact .container .content form {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.contact .container .content input {
+    padding: 10px;
+}
+
+.contact .container .content input[type="submit"] {
+    background-color: var(--main-color);
+    color: #FFF;
+    padding: 20px;
+    width: fit-content;
+    position: absolute;
+    bottom: 20px;
+    right: 0px;
+    border: none;
+}
+
+.contact .container .content input:focus {
+    outline: none;
+}
+
+.contact .container .content .info {
+
+    width: 25%;
+}
+
+.contact .container .content .info .col:first-child {
+    margin-bottom: 60px;
+}
+
+.contact .container .content .info .col h4 {
+    margin-bottom: 30px;
+}
+
+.contact .container .content .info .col p {
+    color: var(--secondry-color);
+    padding-bottom: 10px;
+}
+
+@media (max-width:768px) {
+    .contact .content {
+        flex-direction: column-reverse;
+    }
+
+    .contact .container .content form {
+        width: 100%;
+    }
+
+    .contact .container .content .info {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* End Contact Section  */
+
+/* Start Footer */
+footer {
+    margin-top: 100px;
+    background-image: url(../media/subscribe.jpg);
+    background-size: cover;
+    padding: 50px 0px;
+    text-align: center;
+    position: relative;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #00000078;
+}
+
+footer .container {
+    position: relative;
+}
+
+footer .container h3 {
+    width: fit-content;
+    border-bottom: 1px solid #FFF;
+    margin: 30px auto;
+    font-weight: normal;
+    color: #FFF;
+    padding: 20px;
+}
+
+footer .container a {
+    color: #FFF;
+    padding: 20px;
+}
+
+footer .container p {
+    color: #FFF;
+    padding-top: 50px;
+}
+
+footer .container span {
+    color: var(--main-color);
+}
+
+/* End Footer */
